@@ -28,9 +28,14 @@ function App() {
   const [currentView, setCurrentView] = useState('home');
   const [selectedCollection, setSelectedCollection] = useState(null);
 
+  const handleHomeClick = () => {
+    setCurrentView('home');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="app-container">
-      <Navbar onHomeClick={() => setCurrentView('home')} onProductsClick={() => setCurrentView('products')} />
+      <Navbar onHomeClick={handleHomeClick} onProductsClick={() => setCurrentView('products')} />
       
       {currentView === 'home' ? (
         <main>

@@ -26,12 +26,12 @@ const Banner = ({ onSeeAllProducts }) => {
       <div className="banner-overlay"></div>
       <div className="banner-content">
         <h1 className="banner-title">
-          Visualize<br />
-          Your Room Into<br />
-          A Masterpiece!
+          Elevate Your Space<br />
+          With Fine Artistry<br />
+          Underfoot
         </h1>
         <p className="banner-subtitle">
-          Great Product Quality with Outstanding Design
+          Handcrafted rugs and premium carpets designed for timeless elegance and lasting comfort.
         </p>
         <div className="banner-actions">
           <button className="btn-banner btn-orange" onClick={scrollToProducts}>SEE ALL PRODUCTS</button>

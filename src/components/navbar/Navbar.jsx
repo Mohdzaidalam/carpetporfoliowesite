@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import logoImg from '../../assets/logo.png';
 
 const Navbar = ({ onHomeClick, onProductsClick }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,13 +37,7 @@ const Navbar = ({ onHomeClick, onProductsClick }) => {
         
         <div className="navbar-logo">
           <a href="/" onClick={(e) => { e.preventDefault(); if(onHomeClick) onHomeClick(); }}>
-            <div className="logo-icon">
-              <div className="inner-square"></div>
-            </div>
-            <div className="logo-text-group">
-              <span className="logo-title">CARPET</span>
-              <span className="logo-subtitle">Floor & Paving Service Inc.</span>
-            </div>
+            <img src={logoImg} alt="Carpet Logo" className="logo-img" />
           </a>
         </div>
         
