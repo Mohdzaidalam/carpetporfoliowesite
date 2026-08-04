@@ -49,14 +49,14 @@
 }
 
 .logo-img {
-  height: 90px;
+  height: 70px;
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled .logo-img {
-  height: 65px;
+  height: 50px;
 }
 
 .logo-img:hover {
@@ -70,13 +70,38 @@
 }
 
 .navbar-links a {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
   transition: color 0.3s ease;
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #df881f, #f5b942);
+  border-radius: 2px;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgba(223, 136, 31, 0.6);
+}
+
+.navbar-links a:hover {
+  color: #f5b942;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
 }
 
 .dropdown-arrow {
@@ -88,10 +113,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.navbar-links a:hover {
-  color: #df881f;
 }
 
 .navbar-actions-mobile {
