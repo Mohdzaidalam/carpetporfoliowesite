@@ -27,7 +27,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 32px;
-    padding-top: 80px;
+    padding-top: 120px;
     /* Offset for navbar */
 }
 
@@ -87,6 +87,10 @@
 }
 
 @media (max-width: 768px) {
+    .banner-content {
+        padding-top: 160px;
+    }
+
     .banner-actions {
         flex-direction: column;
         max-width: 300px;
