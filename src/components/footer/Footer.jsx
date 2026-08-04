@@ -10,7 +10,7 @@ const Footer = () => {
             
             <div className="footer-col brand-col">
               <div className="footer-logo">
-                <span className="logo-text">Aura</span>
+                <span className="logo-text">Aurelia</span>
                 <span className="logo-subtext">Carpets</span>
               </div>
               <p className="footer-desc">
@@ -49,11 +49,9 @@ const Footer = () => {
             <div className="footer-col">
               <h3>Contact Us</h3>
               <address>
-                <p><strong>Name:</strong> Irshad Ali</p>
-                <p><strong>Mob:</strong> 7505046678</p>
+                <p>Irshad Ali</p>
+                <p>+91 7505046678</p>
                 <p><strong>Address:</strong> Imambada, Mirzapur 231001</p>
-                <br />
-                <p><strong>Website:</strong> <a href="https://ibrahimrug.com/" target="_blank" rel="noopener noreferrer" style={{color: "inherit", textDecoration: "underline"}}>ibrahimrug.com</a></p>
               </address>
             </div>
 
@@ -63,7 +61,7 @@ const Footer = () => {
       
       <div className="footer-bottom">
         <div className="footer-container flex-between">
-          <p>&copy; {new Date().getFullYear()} Aura Carpets. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Aurelia Carpets. All rights reserved.</p>
           <div className="footer-legal">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import logoImg from '../../assets/logo.png';
+import logoImg from '../../assets/loggo.png';
 
 const Navbar = ({ onHomeClick, onProductsClick }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,8 +36,9 @@ const Navbar = ({ onHomeClick, onProductsClick }) => {
       <div className="navbar-container">
         
         <div className="navbar-logo">
-          <a href="/" onClick={(e) => { e.preventDefault(); if(onHomeClick) onHomeClick(); }}>
+          <a href="/" onClick={(e) => { e.preventDefault(); if(onHomeClick) onHomeClick(); }} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textDecoration: 'none' }}>
             <img src={logoImg} alt="Carpet Logo" className="logo-img" />
+            <span style={{ color: '#fff', fontSize: '0.9rem', marginTop: '2px', fontWeight: 'bold', letterSpacing: '1px', textAlign: 'center' }}>Aurelia Carpets</span>
           </a>
         </div>
         
