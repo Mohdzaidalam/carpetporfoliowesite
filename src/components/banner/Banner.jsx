@@ -1,5 +1,6 @@
 import React from 'react';
 import './Banner.css';
+import bkImage from '../../assets/bk.jpg';
 
 const Banner = ({ onSeeAllProducts }) => {
   const scrollToProducts = () => {
@@ -22,7 +23,7 @@ const Banner = ({ onSeeAllProducts }) => {
   };
 
   return (
-    <section className="banner">
+    <section className="banner" style={{ backgroundImage: `url(${bkImage})` }}>
       <div className="banner-overlay"></div>
       <div className="banner-content">
         <h1 className="banner-title">
