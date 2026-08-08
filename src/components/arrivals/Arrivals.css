@@ -4,8 +4,10 @@
 }
 
 .arrivals-grid {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  grid-auto-columns: 260px;
   gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -21,8 +23,8 @@
 }
 
 .arrivals-grid .product-card {
-  flex: 0 0 260px;
   scroll-snap-align: start;
+  width: 260px;
 }
 
 /* slider-wrapper inside arrivals shares the same styles from App.css */
