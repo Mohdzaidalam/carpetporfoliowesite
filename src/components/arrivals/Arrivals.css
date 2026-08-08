@@ -4,29 +4,31 @@
 }
 
 .arrivals-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 16px;
+  flex: 1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.arrivals-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.arrivals-grid .product-card {
+  flex: 0 0 260px;
+  scroll-snap-align: start;
+}
+
+/* slider-wrapper inside arrivals shares the same styles from App.css */
+.arrivals-section .slider-wrapper {
   max-width: 1400px;
   margin: 0 auto;
-}
-
-@media (max-width: 1100px) {
-  .arrivals-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 700px) {
-  .arrivals-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .arrivals-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .product-card {

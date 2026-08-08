@@ -109,25 +109,62 @@ main {
   font-size: 1.1rem;
 }
 
-.collections-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-@media (max-width: 1100px) {
-  .collections-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.slider-arrow {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid var(--secondary);
+  background: white;
+  color: var(--secondary);
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 600px) {
-  .collections-grid {
-    grid-template-columns: 1fr;
-  }
+.slider-arrow:hover {
+  background: var(--secondary);
+  color: white;
+  transform: scale(1.1);
 }
+
+.collections-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 16px;
+  flex: 1;
+  /* hide scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.collections-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.collections-grid .collection-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+}
+
 
 .collection-card {
   border-radius: 4px;

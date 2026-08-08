@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Arrivals.css';
 import img1 from '../../assets/carpet-4.jpeg';
 import img2 from '../../assets/carpet-5.jpeg';
@@ -13,6 +13,13 @@ import img10 from '../../assets/carpet-18.jpeg';
 
 const Arrivals = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const arrivalsRef = useRef(null);
+
+  const scrollArrivals = (dir) => {
+    if (arrivalsRef.current) {
+      arrivalsRef.current.scrollBy({ left: dir * 300, behavior: 'smooth' });
+    }
+  };
 
   const products = [
     { id: 1, name: 'Royal Shiraz', price: '$1,299', image: img1 },
@@ -33,20 +40,24 @@ const Arrivals = () => {
         <h2>New Arrivals</h2>
         <p>Discover our latest handwoven treasures</p>
       </div>
-      <div className="arrivals-grid">
-        {products.map((product) => (
-          <div key={product.id} className="product-card" onClick={() => setSelectedProduct(product)} style={{cursor: 'pointer'}}>
-            <div className="product-image">
-              <img src={product.image} alt={product.name} />
-              <div className="product-action">
-                <button className="btn-quick-view">Quick View</button>
+      <div className="slider-wrapper">
+        <button className="slider-arrow slider-arrow-left" onClick={() => scrollArrivals(-1)} aria-label="Scroll left">&#8592;</button>
+        <div className="arrivals-grid" ref={arrivalsRef}>
+          {products.map((product) => (
+            <div key={product.id} className="product-card" onClick={() => setSelectedProduct(product)} style={{cursor: 'pointer'}}>
+              <div className="product-image">
+                <img src={product.image} alt={product.name} />
+                <div className="product-action">
+                  <button className="btn-quick-view">Quick View</button>
+                </div>
+              </div>
+              <div className="product-info">
+                <h3>{product.name}</h3>
               </div>
             </div>
-            <div className="product-info">
-              <h3>{product.name}</h3>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <button className="slider-arrow slider-arrow-right" onClick={() => scrollArrivals(1)} aria-label="Scroll right">&#8594;</button>
       </div>
 
       {/* Product Detail Modal */}

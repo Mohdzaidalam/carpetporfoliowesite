@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Banner from './components/banner/Banner';
 import Footer from './components/footer/Footer';
@@ -32,6 +32,14 @@ function App() {
   const [currentView, setCurrentView] = useState('home');
   const [selectedCollection, setSelectedCollection] = useState(null);
 
+  const collectionRef = useRef(null);
+
+  const scrollCollection = (dir) => {
+    if (collectionRef.current) {
+      collectionRef.current.scrollBy({ left: dir * 320, behavior: 'smooth' });
+    }
+  };
+
   const handleHomeClick = () => {
     setCurrentView('home');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -52,19 +60,23 @@ function App() {
             <h2>Featured Collections</h2>
             <p>Masterpieces curated for discerning tastes</p>
           </div>
-          
-          <div className="collections-grid">
-            {collections.map((col) => (
-              <div key={col.id} className="collection-card" onClick={() => setSelectedCollection(col)}>
-                <div className="card-image">
-                  <img src={col.image} alt={col.name} />
+
+          <div className="slider-wrapper">
+            <button className="slider-arrow slider-arrow-left" onClick={() => scrollCollection(-1)} aria-label="Scroll left">&#8592;</button>
+            <div className="collections-grid" ref={collectionRef}>
+              {collections.map((col) => (
+                <div key={col.id} className="collection-card" onClick={() => setSelectedCollection(col)}>
+                  <div className="card-image">
+                    <img src={col.image} alt={col.name} />
+                  </div>
+                  <div className="card-content">
+                    <h3>{col.name}</h3>
+                    <span className="card-link" style={{cursor: 'pointer'}}>View Collection &rarr;</span>
+                  </div>
                 </div>
-                <div className="card-content">
-                  <h3>{col.name}</h3>
-                  <span className="card-link" style={{cursor: 'pointer'}}>View Collection &rarr;</span>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <button className="slider-arrow slider-arrow-right" onClick={() => scrollCollection(1)} aria-label="Scroll right">&#8594;</button>
           </div>
         </section>
 
