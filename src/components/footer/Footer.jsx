@@ -51,6 +51,8 @@ const Footer = () => {
               <address>
                 <p>Irshad Ali</p>
                 <p>+91 7505046678</p>
+                <p><a href="mailto:info@aureliacarpets.com">info@aureliacarpets.com</a></p>
+                <p><a href="mailto:contact@aureliacarpets.com">contact@aureliacarpets.com</a></p>
                 <p><strong>Address:</strong> Imambada, Mirzapur 231001</p>
               </address>
             </div>
