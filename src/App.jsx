@@ -14,6 +14,8 @@ import carpet3 from './assets/carpet-3.jpeg';
 import carpet8 from './assets/carpet-8.jpeg';
 import carpet9 from './assets/carpet-9.jpeg';
 import carpet10 from './assets/carpet-10.jpeg';
+import carpet15 from './assets/carpet-15.jpeg';
+import carpet16 from './assets/carpet-16.jpeg';
 
 const collections = [
   { id: 1, name: 'Persian Heritage', image: carpet1, desc: 'Inspired by centuries of Persian weaving traditions, featuring intricate floral medallions and rich, natural dye palettes.', material: '100% Hand-spun Silk', origin: 'Iran (Persia)', care: 'Professional wash only' },
@@ -21,7 +23,9 @@ const collections = [
   { id: 3, name: 'Vintage Overdyed', image: carpet3, desc: 'Antique rugs revitalized with a modern over-dyeing technique, blending historical textures with vibrant color expressions.', material: 'Upcycled Antique Wool', origin: 'Turkey', care: 'Avoid direct sunlight, professional wash' },
   { id: 4, name: 'Tribal Geometric', image: carpet8, desc: 'Bold, rustic patterns handmade by nomadic artisans. Each piece tells a unique ancestral story through geometric shapes.', material: 'Organic Sheep Wool', origin: 'Morocco (Atlas Mts)', care: 'Shake out regularly, spot clean' },
   { id: 5, name: 'Contemporary Abstract', image: carpet9, desc: 'A fusion of artistic expression and textiles. Dynamic brush-stroke patterns that serve as modern floor art.', material: 'Bamboo Silk & Wool Blend', origin: 'India', care: 'Professional clean only' },
-  { id: 6, name: 'Classic Elegance', image: carpet10, desc: 'Timeless floral patterns and borders that bring sophisticated elegance to dining rooms and formal spaces.', material: 'New Zealand Wool', origin: 'Pakistan', care: 'Professional clean only' }
+  { id: 6, name: 'Classic Elegance', image: carpet10, desc: 'Timeless floral patterns and borders that bring sophisticated elegance to dining rooms and formal spaces.', material: 'New Zealand Wool', origin: 'Pakistan', care: 'Professional clean only' },
+  { id: 7, name: 'Silk Masterpieces', image: carpet15, desc: 'Extraordinarily fine silk carpets hand-knotted with thousands of knots per square inch, capturing light with a lustrous sheen.', material: '100% Pure Silk', origin: 'Qum, Iran', care: 'Handle with care, specialist clean only' },
+  { id: 8, name: 'Royal Bokhara', image: carpet16, desc: 'Iconic octagonal gul motifs arranged in symmetrical rows on a rich crimson ground — a timeless Central Asian classic.', material: 'Hand-spun Afghan Wool', origin: 'Turkmenistan', care: 'Vacuum gently, professional wash' }
 ];
 
 function App() {

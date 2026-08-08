@@ -8,6 +8,8 @@ import img5 from '../../assets/carpet-11.jpeg';
 import img6 from '../../assets/carpet-12.jpeg';
 import img7 from '../../assets/carpet-13.jpeg';
 import img8 from '../../assets/carpet-14.jpeg';
+import img9 from '../../assets/carpet-17.jpeg';
+import img10 from '../../assets/carpet-18.jpeg';
 
 const Arrivals = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -21,6 +23,8 @@ const Arrivals = () => {
     { id: 6, name: 'Golden Qum', price: '$3,200', image: img6 },
     { id: 7, name: 'Sapphire Heriz', price: '$1,150', image: img7 },
     { id: 8, name: 'Ruby Mashhad', price: '$1,420', image: img8 },
+    { id: 9, name: 'Amber Yazd', price: '$1,780', image: img9 },
+    { id: 10, name: 'Pearl Ardabil', price: '$2,350', image: img10 },
   ];
 
   return (
