@@ -8,7 +8,7 @@ import AllProducts from './components/allproducts/AllProducts';
 import './App.css';
 
 // Import images for collections
-import carpet1 from './assets/green.jpeg';
+import carpet1 from './assets/green.png';
 import carpet2 from './assets/carpet-2.jpeg';
 import carpet3 from './assets/carpet-3.jpeg';
 import carpet8 from './assets/carpet-8.jpeg';
