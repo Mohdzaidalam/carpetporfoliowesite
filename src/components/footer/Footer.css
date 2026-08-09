@@ -128,6 +128,30 @@
   transform: translateY(-3px);
 }
 
+.whatsapp-link:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+}
+
+.phone-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.whatsapp-inline {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 !important;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-inline:hover {
+  transform: scale(1.2);
+  color: inherit !important;
+  padding-left: 0 !important;
+}
+
 .footer-col h3 {
   font-family: var(--font-heading);
   font-size: 1.25rem;
